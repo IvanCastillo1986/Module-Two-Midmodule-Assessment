@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <script src="index.js" defer></script>
+</head>
+<!--I can select how many dice I want to roll
+    I can click a button to roll that many dice
+    I can view the dice roll as well as its sum
+    I can view the history of all of my previous rolls and their sum-->
+<body>
+    <h1>Dice Roller</h1>
+
+    <label for="dice-input">Number of dice: </label>
+    <input id="dice-input" type="number">  <br/>
+    <button id="dice-button">Roll the dice!</button>
+
+    <div style="border: 3px solid black; width: 100%; height: 200px; margin: 20px 0px 20px 0px">
+    <p id="dice-para"></p>
+    <p id="sum-para"></p>
+    </div>
+
+    <div style="border: 3px solid black; width: 100%; margin: 20px 0px;">
+    <h1>History</h1>
+    <ul></ul>
+    </div>
+    
+
+</body>
+</html>
