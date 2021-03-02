@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // The Roll button to click on
 let rollBtn = document.getElementById("dice-button")
     // This function takes button click and displays a specified dice from 1-6 and displays it in #dice-para 
+    let historyCount = 0
 rollBtn.addEventListener("click", () => {
     function randomNum() {
         let min = 0
@@ -32,8 +33,6 @@ let diceNum = parseInt(document.getElementById("dice-input").value)
             return this.diceArr
         },
     }
-    
-
 myStats.addToArr()
 
 // What we need to access to store information:
@@ -64,12 +63,17 @@ let sumDisplay = document.getElementById("sum-para")
 collectSum()
 sumDisplay.innerHTML = myStats.sum
 
-
-        let ul = document.querySelector("ul")
-        let li = document.createElement("li")
-        li.textContent = `${diceDisplay.innerHTML}=${sumDisplay.innerHTML}`
+// we will use a similar solution as secondLargestNum(), with a tempVariable
+let ul = document.querySelector("ul")
+let li = document.createElement("li")
+let oldClick = `${diceDisplay.innerHTML}=${sumDisplay.innerHTML}`
+function displayHistory() {
         ul.appendChild(li)
+        li.textContent = `${diceDisplay.innerHTML}=${sumDisplay.innerHTML}`
+        // li.style.justifyContent = "center";     // find out how to style.justifyContent="center" with this item
+}
+displayHistory()
 
-})
+}) //eventListener click closebracket
 
-})
+}) //eventListener DOMContentLoaded closebracket
