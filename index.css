@@ -1,0 +1,16 @@
+div {
+    border: 3px solid black; 
+    width: 100%; 
+    height: 200px; 
+    margin: 20px 0px 20px 0px
+}
+
+#secondDiv {
+    border: 3px solid black; 
+    width: 100%; 
+    margin: 20px 0px;
+}
+
+#dice-para {
+    font-size: 40px;
+}

@@ -1,7 +1,20 @@
 // Will start coding the project from scratch. This one will be neater, with an object instead of array to 
 // access and display diceSymbols. Will use defer instead of DOMContentLoaded
+
+// Added separate stylesheet
+
+// SMART goals:             (Specific Measurable Acheivable Relevant Timebound)
+// By 12:40 PM, I will encapsulate my input tag and button inside a form tag and understand what that does to my code
+// <form> tag has certain default behaviors. For one, it attempts to submit everything out to a server. For some reason, this 
+// removes the values we try to display on the webpage after a mSec. Had to add an event listener with preventDefault()
+
 let historyCount = 0
 let historyArray = ['']
+
+let form = document.querySelector("form")
+form.addEventListener("click", function(event) {
+    event.preventDefault()
+})
 
 let btn = document.getElementById("dice-button")
 btn.addEventListener("click", () => {
